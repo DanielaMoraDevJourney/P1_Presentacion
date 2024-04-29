@@ -1,4 +1,4 @@
-﻿namespace ProyectoIntegrador_PZ_KS_DM.Models
+﻿namespace ProyectoIntegrador_PZ_KS_DM.Models.ViewModels
 {
     public class PostDetallesViewModel
     {

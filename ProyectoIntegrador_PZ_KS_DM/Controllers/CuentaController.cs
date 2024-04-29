@@ -113,7 +113,7 @@ namespace ProyectoIntegradosPZ_KS_DM.Controllers
                                 ViewData["mensaje"] = "Su cuenta ha sido validada exitosamente.";
 
                             else
-                                ViewData["mensaje"] = "Su enlace de activacion ha expirado.";
+                                ViewData["mensaje"] = "Su enlace de activación ha expirado.";
                             con.Close();
                         }
                     }

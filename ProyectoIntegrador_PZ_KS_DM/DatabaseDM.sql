@@ -82,10 +82,10 @@ SELECT 1 AS Resultado
 END
 GO
 
-CREATE PROCEDURE ValidarUsuario
+ALTER PROCEDURE ValidarUsuario
 @Correo VARCHAR(100)
 AS BEGIN
-SELECT * FROM Usuario WHERE Correo=@Correo
+SELECT * FROM Usuarios WHERE Correo=@Correo
 END
 GO
  

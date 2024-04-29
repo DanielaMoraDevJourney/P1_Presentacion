@@ -1,6 +1,53 @@
-﻿namespace ProyectoIntegrador_PZ_KS_DM.Views.Cuenta
-{
-    public class Registrar
-    {//HOL
-    }
-}
+﻿ @model Usuario
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 mx-auto">
+            <div class="card mt-5">
+                <div class="card-header bg-primary text-white">
+                    <h2 class="text-center">Registro de usuarios</h2>
+                </div>
+                <div class="card-body">
+                    <form method="post" asp-action="Registrar" asp-controller="Cuenta">
+                        @Html.AntiForgeryToken()
+                        <div class="form-group">
+                            <label asp-for="Nombre">Nombre</label>
+                            <input asp-for="Nombre" class="form-control" placeholder="Ingrese su nombre">
+                            <span asp-validation-for="Nombre" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Apellido">Apellido</label>
+                            <input asp-for="Apellido" class="form-control" placeholder="Ingrese su apellido">
+                            <span asp-validation-for="Apellido" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="NombreUsuario">Nombre de Usuario</label>
+                            <input asp-for="NombreUsuario" class="form-control" placeholder="Ingrese su nombre dde Usuario">
+                            <span asp-validation-for="NombreUsuario" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Correo">Correo Electronico</label>
+                            <input asp-for="Correo" type="email" class="form-control" placeholder="Ingrese su E-mail">
+                            <span asp-validation-for="Correo" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Contrasenia">Contraseña</label>
+                            <input asp-for="Contrasenia" type"password" class="form-control" placeholder="Ingrese su contraseña">
+                            <span asp-validation-for="Contrasenia" class="text-danger"></span>
+                        </div>
+                        
+                        <div 
+                          class="form-group text-center">
+                          <button type="submit" class="btn-btn-secondary btn-block" >Registrarse</button>
+
+                      </div>
+                    </form>
+                </div>
+            </div>
+            @if(ViewBag.Error !=null){
+                <div class="alert alert-danger mt-3" role="alert">@ViewBag.Error</div>
+
+            }
+        </div>
+    </div>
+</div>

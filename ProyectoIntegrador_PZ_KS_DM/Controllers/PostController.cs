@@ -7,6 +7,7 @@ using System.Data;
 
 using ProyectoIntegradosPZ_KS_DM.Data.Servicios;
 using ProyectoIntegrador_PZ_KS_DM.Models;
+using ProyectoIntegrador_PZ_KS_DM.Models.ViewModels;
 
 namespace ProyectoIntegradosPZ_KS_DM.Controllers
 {

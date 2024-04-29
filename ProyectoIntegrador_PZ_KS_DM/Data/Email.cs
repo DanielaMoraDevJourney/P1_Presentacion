@@ -12,8 +12,8 @@ namespace ProyectoIntegradosPZ_KS_DM.Data
         }
         void Correo(string correo_receptor, string token)
         {
-            string correo_emisor = "@hotmail.com";
-            string clave_emisor = "";
+            string correo_emisor = "kamilasosa99@gmail.com";
+            string clave_emisor = "mB$5Z*4o3";
 
 
             MailAddress receptor = new(correo_receptor);

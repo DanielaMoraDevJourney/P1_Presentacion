@@ -103,7 +103,7 @@ namespace ProyectoIntegradosPZ_KS_DM.Controllers
                         {
                             cmd.CommandType = CommandType.StoredProcedure;
                             cmd.Parameters.AddWithValue("@Token", token);
-                            DateTime fechaexpiracion = DateTime.UtcNow;
+                            DateTime fechaexpiracion = DateTime.UtcNow.AddMinutes(5);
                             cmd.Parameters.AddWithValue("@Fecha", fechaexpiracion);
                             con.Open();
                             var resultado = cmd.ExecuteScalar();

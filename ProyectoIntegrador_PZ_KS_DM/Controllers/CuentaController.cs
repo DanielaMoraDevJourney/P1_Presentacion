@@ -22,6 +22,7 @@ namespace ProyectoIntegradosPZ_KS_DM.Controllers
     {
         private readonly ContextoPZ_KS_DM _contexto;
         private readonly UsuarioServicio _usuarioServicio;
+        //
 
         public CuentaController(ContextoPZ_KS_DM con)
         {

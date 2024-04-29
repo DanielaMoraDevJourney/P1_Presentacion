@@ -1,0 +1,18 @@
+﻿using ProyectoIntegrador_PZ_KS_DM.Data.Enums;
+using System.ComponentModel;
+using System.Reflection;
+
+namespace ProyectoIntegradosPZ_KS_DM.Data.Enums
+{
+    public class CategoriaEnumHelper
+    {
+        public static string ObtenerDescripcion(CategoriaEnum categoria)
+        {
+            FieldInfo? field = categoria.GetType().GetField(categoria.ToString());
+            DescriptionAttribute? attribute = field?.GetCustomAttribute<DescriptionAttribute>();
+            return attribute != null ? attribute.Description : categoria.ToString();
+
+
+        }
+    }
+}
